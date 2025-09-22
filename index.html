@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnotAí</title>
+
+    <!-- Bootstrap (permitido pelo edital) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Nosso CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+  <div class="brand">AnotAí</div>
+  <div id="user-area" class="user-area"></div> <!-- preenchido dinamicamente -->
+</header>
+
+<main class="container">
+  <!-- WELCOME VIEW: registro / login -->
+  <section id="welcome-view" class="view">
+    <h1>Bem-vindo ao AnotAí</h1>
+    <p class="lead">Crie sua conta ou faça login para acessar suas anotações.</p>
+
+    <div class="card auth-card">
+      <div class="auth-tabs">
+        <button id="tab-register" class="tab active">Cadastrar</button>
+        <button id="tab-login" class="tab">Entrar</button>
+      </div>
+
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <form id="register-form" class="auth-form">
+        <input id="reg-name" type="text" placeholder="Nome completo" required />
+        <input id="reg-email" type="email" placeholder="E-mail" required />
+        <input id="register-phone" type="tel" placeholder="Telefone" required />
+        <button type="submit" class="btn">Criar conta</button>
+      </form>
+
+      <!-- FORMULÁRIO DE LOGIN (escondido por padrão) -->
+      <form id="login-form" class="auth-form" style="display:none;">
+        <input id="login-email" type="email" placeholder="E-mail" required />
+        <input id="login-phone" type="text" placeholder="Telefone" required />
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+
+      <div id="auth-message" class="message"></div>
+    </div>
+  </section>
+
+  <!-- APP VIEW: listado de notas e formulário para nova nota -->
+  <section id="app-view" class="view" style="display:none;">
+    <div class="app-controls">
+      <h2>Minhas Anotações</h2>
+      <div>
+        <button id="btn-logout" class="btn-outline">Sair</button>
+      </div>
+    </div>
+
+    <!-- formulário de nova nota -->
+    <div class="card note-create">
+      <form id="note-form">
+        <input id="note-title" type="text" placeholder="Título" required />
+        <textarea id="note-content" placeholder="Conteúdo" required></textarea>
+        
+        <select id="note-status">
+          <option value="active">Ativa</option>
+          <option value="archived">Arquivada</option>
+          <option value="closed">Fechada</option>
+        </select>
+        <button type="submit" class="btn">Salvar anotação</button>
+      </form>
+      <div id="note-message" class="message"></div>
+    </div>
+
+    <!-- lista de notas do usuário -->
+    <div id="notes-list" class="cards-grid"></div>
+  </section>
+</main>
+
+<!-- script -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --accent:#5c7cfa;
+  --muted:#6b7280;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color:#111827;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+.app-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px;
+  background:linear-gradient(90deg,#fff,#f3f7fb);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.brand{
+  font-weight:700;
+  font-size:30px;
+  color:var(--accent);
+}
+.user-area{font-size:25px;color:var(--muted);}
+.container{max-width:980px;margin:28px auto;padding:0 16px;}
+.view h1{margin:8px 0 12px}
+.auth-card, .note-create, .card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(20,30,50,0.04);
+  padding:16px;
+  margin-bottom:18px;
+}
+
+/* auth tabs */
+.auth-tabs{display:flex;gap:8px;margin-bottom:12px}
+.tab{background:transparent;border:1px solid #e6edf6;padding:8px 12px;border-radius:8px;cursor:pointer}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* form inputs */
+.auth-form input, .auth-form textarea, #note-form input, #note-form textarea, #note-form select {
+  width:100%;
+  padding:10px 12px;
+  margin:8px 0;
+  border-radius:8px;border:1px solid #e6edf6;
+  background:#fbfcfe;
+}
+
+/* buttons */
+.btn{background:var(--accent);color:#fff;padding:10px 12px;border-radius:8px;border:none;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid #e6edf6;padding:8px 10px;border-radius:8px;cursor:pointer}
+
+/* cards grid for notes */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:12px}
+.note-card{padding:12px;border-radius:10px;background:#fff;border:1px solid #eee}
+.note-card h3{margin:0 0 8px;color:#0f172a}
+.note-card p{margin:6px 0;color:var(--muted);font-size:14px}
+.note-date {font-size: 1rem; color: #777; margin-top: 5px;}
+
+/* small message */
+.message{margin-top:10px;color:#ef4444;font-size:14px}
+
+#welcome-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logout-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+#logout-btn:hover {
+    background-color: #c9302c;
+}
