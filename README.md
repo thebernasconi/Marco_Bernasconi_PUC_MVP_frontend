@@ -24,17 +24,8 @@ SPA simples em HTML, CSS e JavaScript puros, sem frameworks JS. O frontend conso
 
 ## ▶️ Como rodar
 1. Certifique-se de que o backend está rodando em `http://127.0.0.1:5000`.
-2. Abra `index.html` diretamente no navegador:  
-   - `file:///C:/caminho/Marco_Bernasconi_PUC_MVP_frontend/index.html`
+2. Abra `index.html` diretamente no navegador:
 
----
-
-## ⚠️ Problemas de CORS
-- Firefox funciona melhor ao abrir com `file://`.
-- Caso tenha erro no Chrome/Edge, rode:
-```bash
-python -m http.server 5500
-```
 ---
 
 ## ✨ Funcionalidades
