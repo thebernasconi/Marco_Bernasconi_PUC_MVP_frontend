@@ -1,4 +1,9 @@
 # MVP PUC Desenvolvimento FullStack - Marco Bernasconi
+
+Este é um projeto de desenvolvimento fullstack.
+Se trata de uma aplicação para poder fazer anotações que aparecerão para o usuário em formato de cards.
+O usuário se cadastra e tem acesso somente às suas anotações, podendo criar, editar e excluir as mesmas.
+
 ---
 ## Frontend (HTML, CSS, JavaScript)
 
