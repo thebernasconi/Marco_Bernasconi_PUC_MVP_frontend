@@ -181,6 +181,7 @@ function formatDateSafe(value) {
     const normalized = value.replace(/(\.\d{3})\d+$/, '$1');
     const d = new Date(normalized);
     if (isNaN(d.getTime())) return '';
+    d.setHours(d.getHours() - 3); // Ajuste de fuso horário (UTC-3)
     return d.toLocaleString('pt-BR', {
         day: '2-digit', month: '2-digit', year: 'numeric',
         hour: '2-digit', minute: '2-digit'
@@ -312,4 +313,5 @@ function showMessage(selector, text) {
 
 function clearMessages() {
     document.querySelectorAll('.message').forEach(el => el.textContent = '');
+
 }
