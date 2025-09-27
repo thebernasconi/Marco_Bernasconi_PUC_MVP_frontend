@@ -28,8 +28,10 @@ SPA simples em HTML, CSS e JavaScript puros, sem frameworks JS. O frontend conso
 ---
 
 ## ▶️ Como rodar
-1. Certifique-se de que o backend está rodando em `http://127.0.0.1:5000`.
-2. Abra `index.html` diretamente no navegador:
+
+1. Baixe os arquivos "index.html", "style.css" e "script.js" para um mesmo repositório chamado "frontend", por exemplo.
+2. Certifique-se de que o backend está rodando em `http://127.0.0.1:5000`.
+3. Abra `index.html` diretamente no navegador:
 
 ---
 
